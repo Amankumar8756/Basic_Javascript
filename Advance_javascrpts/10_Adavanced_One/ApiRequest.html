@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body  style="background-color: black  ;">
+  
+
+<!-- Value	State	Description
+0	UNSENT	Request शुरू नहीं किया गया है। (open() मेथड कॉल नहीं हुआ है।)
+1	OPENED	Request को तैयार किया गया है। (open() मेथड कॉल हो चुका है।)
+2	HEADERS_RECEIVED	सर्वर ने हेडर्स रिस्पॉन्स भेज दिए हैं। (send() मेथड कॉल हो चुका है।)
+3	LOADING	रिस्पॉन्स बॉडी आ रही है, लेकिन पूरी नहीं आई है।
+4	DONE	रिस्पॉन्स पूरी तरह से आ चुका है और प्रोसेसिंग के लिए तैयार है। -->
+<h1 style="color: aliceblue;">Api Requests</h1>
+
+
+</body>
+
+<script>
+  const requestUrl =  'https://randomuser.me/api/'
+
+const xhr = new XMLHttpRequest();
+
+xhr.open('GET',requestUrl)
+xhr.onreadystatechange = function(){
+  console.log(xhr.readyState);
+  //console.log("here")
+  if(xhr.readyState === 4){
+    //console.log(this.responseText)
+
+    const data = JSON.parse(this.responseText)
+    console.log(typeof  data);
+    console.log(data.info.results)
+
+  }
+
+
+}
+
+
+xhr.send();
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Aur Code</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+  <h1>Hello Aman </h1>
+  
+
+</body>
+<script>
+
+  const div = document.createElement('div')
+  console.log(div)
+ div.className ="main"
+
+ div.id = Math.round(Math.random() * 10 +1)
+
+div.setAttribute("title","generated title")
+div.style.backgroundColor = "green " 
+div.style.padding ="15px"
+div.innerText ="Aman aur code"
+//div.style.innerText ="center"
+
+//attaching text in body
+const addText = document.createTextNode("what are you doing")
+
+div.appendChild(addText)
+document.body.appendChild(div)
+
+</script>
+</html>

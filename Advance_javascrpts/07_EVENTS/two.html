@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Aman With Code</h1>
+
+<button id="stop">stop</button>
+  
+</body>
+<script>
+  // setTimeout( function(){
+
+  //   console.log("Aman")
+  // },2000)
+  //setTimeout(sayAman,2000)
+
+  const sayAman = function(){
+    console.log("AmanKumar");
+  }
+  //document.querySelector('h1').innerHTML = "Best Aman Series"
+
+   const changeText = function(){
+    document.querySelector('h1').innerHTML = "Best Aman Series"
+   }
+   //setTimeout(changeText,2000)
+
+   const change = setTimeout(changeText,2000)
+
+
+
+
+   document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(change)
+    console.log("stopped")
+   })
+</script>
+</html>
